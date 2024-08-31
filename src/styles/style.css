@@ -1,0 +1,283 @@
+/* importaçaõ da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+:root {
+    --vermelho-claro: #BA181B;
+    --claro: #EDF2F4;
+    --vermelho-escuro: #660708;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* estilo do menu de navegação principal */
+
+header {
+    background-color: var(--vermelho-claro);
+}
+
+#nav-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-item {
+    list-style-type: none;
+    font-size: 1.5em;
+    padding: 1em;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--claro);
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+/* estilos da página sobre mim */
+
+#sobre-mim-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5em;
+}
+
+.destaque { color: var(--vermelho-claro); }
+
+.titulo-banner {
+    width: 70%;
+}
+
+.titulo-banner h1 {
+    font-size: 3em;
+    padding-bottom: .5em;
+}
+
+.titulo-banner button {
+    margin-top: 1.2em;
+    background-color: var(--vermelho-claro);
+    color: var(--claro);
+    padding: 1em;
+    border: 1px solid transparent;
+    outline: 0;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: .2s;
+}
+
+.titulo-banner button:hover {
+    border: 1px solid var(--vermelho-claro);
+    background-color: var(--claro);
+    color: var(--vermelho-claro);
+}
+
+.imagem-sobre-mim {
+    width: 30%;
+    position: relative;
+    margin-right: 5em;
+}
+
+.imagem-sobre-mim img {
+    width: 100%;
+    box-shadow: -6px -2px 4px rgba(0, 0, 0, 0.253);
+}
+
+.sombra-imagem {
+    background-color: var(--vermelho-claro);
+    position: absolute;
+    height: 105%;
+    width: 95%;
+    z-index: -1;
+    left: -37px;
+    bottom: 37px;
+}
+
+#sobre-mim-texto {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 5em;
+}
+
+#sobre-mim-texto p {
+    line-height: 2em;
+    padding-bottom: 2.4em;
+}
+
+.titulos {   /* estilização para todos os titulos principais */
+    font-size: 2em;
+    color: var(--vermelho-claro);
+    font-style: italic;
+    padding-bottom: 2em;
+    padding-top: 2.8em;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* estilos da página formação */
+
+#formacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    margin: auto;
+    padding-bottom: 5em;
+}
+
+.formacao-conteudo {
+    position: relative;
+    height: auto;
+    font-size: 1.1em;
+    min-width: 25em;
+    margin-bottom: 3em;
+}
+
+.barra-estilo {
+    background-color: var(--vermelho-claro);
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: -17px;
+}
+
+.formacao-ano {
+    font-size: .9em;
+    font-style: italic;
+    padding-bottom: 1.3em;
+    font-weight: 600;
+    color: var(--vermelho-escuro);
+}
+
+.idiomas {
+    padding-bottom: 1.5em;
+    font-size: 1.1em;
+}
+
+/* estilização da página projetos */
+
+#projetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px 0;
+    padding-bottom: 5em;
+}
+
+.projeto-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--vermelho-claro);
+    color: var(--claro);
+    padding: 2em;
+    font-weight: 300;
+    width: 50em;
+}
+
+.projeto-descricao {
+    width: 40%;
+    align-self: flex-start;
+}
+
+.projeto-descricao h2 {
+    padding-bottom: .5em;
+    font-weight: 400;
+}
+
+.projeto-descricao .link {
+    margin-top: 2em;
+}
+
+.projeto-descricao .link a { color: var(--claro); }
+
+.projeto-descricao .link a:hover {
+    color: var(--vermelho-escuro);
+}
+
+.projeto-imagem {
+    width: 330px;
+    height: 160px;
+}
+
+.projeto-imagem img{
+    width: 100%;
+    height: 100%;
+}
+
+/* estilização da página contato */
+
+#contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 5em;
+}
+
+.contato-container {
+    background-color: var(--claro);
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0px 1px 5px 1px #00000045;
+    color: var(--vermelho-claro);
+    font-weight: 500;
+    width: 50%;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    padding-top: 1em;
+}
+
+.formulario input,
+.formulario #mensagem {
+    outline: 0;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    color: var(--vermelho-claro);
+    font-size: 1em;
+}
+
+.formulario input:focus-within,
+.formulario #mensagem:focus-within {
+    border: 1px solid var(--vermelho-claro);
+}
+
+.formulario input[type="button"] { /* botão Enviar do formulario */
+    border: 1px solid var(--vermelho-escuro);
+    color: var(--vermelho-escuro);
+    font-weight: 500;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.formulario input[type="button"]:hover {
+    background-color: var(--vermelho-escuro);
+    color: var(--claro);
+}
